@@ -1,6 +1,6 @@
 # Expense Tracker
 
-**[Link del proyecto](#)** *(Reemplaza este enlace con la URL de tu proyecto publicado)*
+[Link del proyecto](https://jun200529.github.io/expense-tracker-js/)
 
 ## Descripción del proyecto
 
