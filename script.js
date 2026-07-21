@@ -43,6 +43,8 @@ function agregarMovimiento(event){
 
     const movimiento = {
 
+        id: Date.now(),
+
         descripcion: description.value,
 
         valor: Number(amount.value),
@@ -121,7 +123,7 @@ function mostrarMovimientos(){
 
             </div>
 
-            <button class="delete-btn" onclick="eliminarMovimiento(${movimientos.indexOf(movimiento)})">
+            <button class="delete-btn" onclick="eliminarMovimiento(${movimiento.id})">
 
                 🗑
 
@@ -184,17 +186,27 @@ function actualizarResumen(){
 
 }
 
-function eliminarMovimiento(indice){
+function eliminarMovimiento(id){
+
+    const indice = movimientos.findIndex(function(movimiento){
+
+        return movimiento.id === id;
+
+    });
+
+    if(indice !== -1){
 
         movimientos.splice(indice,1);
 
         guardarMovimientos();
 
-        mostrarMovimientos();
-
         actualizarResumen();
 
+        mostrarMovimientos();
+
     }
+
+}
 
 function guardarMovimientos(){
 
