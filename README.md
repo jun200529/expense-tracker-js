@@ -10,7 +10,7 @@ Este proyecto fue realizado con el propósito de fortalecer los conocimientos en
 
 ## Tecnologías utilizadas
 
-* HTML5
+* HTML5 
 * CSS3
 * JavaScript (ES6+)
 * LocalStorage API
